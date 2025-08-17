@@ -14,6 +14,13 @@ body {
 .wrap { width: min(920px, 95vw); }
 h1 { margin: 18px 0 8px; font-size: 28px; letter-spacing: .4px; }
 
+.scoreboard {
+    display: flex; align-items: center; justify-content: space-between;
+    background: color-mix(in oklab, var(--panel) 92%, #000 8%);
+    border: 1px solid var(--line);
+    border-radius: 12px; padding: 10px 12px; margin-bottom: 10px;
+  }
+
 .score { font-size: 22px; font-weight: 700; color: var(--accent); }
 .sep { color: var(--muted); margin: 0 6px; }
 
