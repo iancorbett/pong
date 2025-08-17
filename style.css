@@ -1,0 +1,11 @@
+
+
+#game {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.35), inset 0 0 0 1px rgba(255,255,255,.04);
+  }
