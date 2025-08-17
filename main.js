@@ -92,3 +92,14 @@ function updateScoreUI() {
 pauseBtn.addEventListener("click", () => running = !running);
 restartBtn.addEventListener("click", restartGame);
 twoPlayerChk.addEventListener("change", (e) => twoPlayer = e.target.checked);
+
+function tick(ts) {
+    if (!state.lastTime) state.lastTime = ts; // sets to current ts if starting
+    const dt = Math.min((ts - state.lastTime) / 1000, 0.033);
+    state.lastTime = ts;
+  
+    update(dt);
+    draw();
+  
+    requestAnimationFrame(tick);
+  }
