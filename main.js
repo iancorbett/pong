@@ -81,3 +81,7 @@ function updateScoreUI() {
       case "KeyL": keys.p2down = false; break;
     }
   });
+
+pauseBtn.addEventListener("click", () => running = !running);
+restartBtn.addEventListener("click", restartGame);
+twoPlayerChk.addEventListener("change", (e) => twoPlayer = e.target.checked);
