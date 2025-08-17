@@ -22,3 +22,13 @@ let running = true;
 let twoPlayer = false;
 let p1Score = 0;
 let p2Score = 0;
+
+const state = {
+    playerY: H/2 - PADDLE_H/2,
+    aiY: H/2 - PADDLE_H/2,
+    ballX: W/2 - BALL_SIZE/2,
+    ballY: H/2 - BALL_SIZE/2,
+    ballVX: randDir() * BALL_START_SPEED,
+    ballVY: BALL_START_SPEED * (Math.random() * 0.5 - 0.25),
+    lastTime: 0
+  };
