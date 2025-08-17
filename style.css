@@ -1,4 +1,11 @@
-
+:root {
+    --bg: #0b1220;
+    --panel: #111827;
+    --ink: #e5e7eb;
+    --muted: #9ca3af;
+    --accent: #a5b4fc;
+    --line: #334155;
+  }
 
 * { box-sizing: border-box; }
 html, body { height: 100%; }
