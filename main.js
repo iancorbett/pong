@@ -72,3 +72,12 @@ function updateScoreUI() {
       case "KeyR": restartGame(); break;
     }
   });
+
+  window.addEventListener("keyup", (e) => {
+    switch (e.code) {
+      case "ArrowUp": case "KeyW": keys.up = false; break;
+      case "ArrowDown": case "KeyS": keys.down = false; break;
+      case "KeyO": keys.p2up = false; break;
+      case "KeyL": keys.p2down = false; break;
+    }
+  });
