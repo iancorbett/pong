@@ -11,6 +11,8 @@ const H = canvas.height;
 const PADDLE_W = 12;
 const PADDLE_H = 90;
 const BALL_SIZE = 12;
+const PLAYER_X = 30;
+const AI_X = W - 30 - PADDLE_W;
 
 let running = true;
 let twoPlayer = false;
