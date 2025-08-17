@@ -46,3 +46,8 @@ function resetBall(towards = 1) {
   state.ballVX = BALL_START_SPEED * towards;
   state.ballVY = BALL_START_SPEED * (Math.random() * 0.5 - 0.25);
 }
+
+function updateScoreUI() {
+    p1ScoreEl.textContent = p1Score;
+    p2ScoreEl.textContent = p2Score;
+  }
