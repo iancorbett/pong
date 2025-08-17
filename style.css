@@ -1,5 +1,8 @@
 
 
+.score { font-size: 22px; font-weight: 700; color: var(--accent); }
+.sep { color: var(--muted); margin: 0 6px; }
+
 #game {
     width: 100%;
     height: auto;
