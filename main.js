@@ -6,6 +6,12 @@ const pauseBtn = document.getElementById("pauseBtn");
 const restartBtn = document.getElementById("restartBtn");
 const twoPlayerChk = document.getElementById("twoPlayer");
 
+const W = canvas.width;
+const H = canvas.height;
+const PADDLE_W = 12;
+const PADDLE_H = 90;
+const BALL_SIZE = 12;
+
 let running = true;
 let twoPlayer = false;
 let p1Score = 0;
