@@ -37,3 +37,12 @@ const state = {
     up: false, down: false,    
     p2up: false, p2down: false 
   };
+
+  function randDir(){ return Math.random() < 0.5 ? 1 : -1; }
+
+function resetBall(towards = 1) {
+  state.ballX = W/2 - BALL_SIZE/2;
+  state.ballY = H/2 - BALL_SIZE/2;
+  state.ballVX = BALL_START_SPEED * towards;
+  state.ballVY = BALL_START_SPEED * (Math.random() * 0.5 - 0.25);
+}
