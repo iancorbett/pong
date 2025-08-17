@@ -32,3 +32,8 @@ const state = {
     ballVY: BALL_START_SPEED * (Math.random() * 0.5 - 0.25),
     lastTime: 0
   };
+
+  const keys = {
+    up: false, down: false,    
+    p2up: false, p2down: false 
+  };
