@@ -5,3 +5,8 @@ const p2ScoreEl = document.getElementById("p2Score");
 const pauseBtn = document.getElementById("pauseBtn");
 const restartBtn = document.getElementById("restartBtn");
 const twoPlayerChk = document.getElementById("twoPlayer");
+
+let running = true;
+let twoPlayer = false;
+let p1Score = 0;
+let p2Score = 0;
