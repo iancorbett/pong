@@ -1,5 +1,16 @@
 
 
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: radial-gradient(1200px 800px at 50% -10%, #121a2d 0%, #0a0f1a 60%, #05070c 100%);
+  display: grid;
+  place-items: center;
+}
+
 .score { font-size: 22px; font-weight: 700; color: var(--accent); }
 .sep { color: var(--muted); margin: 0 6px; }
 
