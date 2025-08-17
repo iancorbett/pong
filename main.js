@@ -82,6 +82,13 @@ function updateScoreUI() {
     }
   });
 
+  canvas.addEventListener("touchmove", (e) => {
+    const t = e.touches[0];
+    const rect = canvas.getBoundingClientRect();
+    const y = ((t.clientY - rect.top) / rect.height) * H;
+    state.playerY = Math.max(0, Math.min(H - PADDLE_H, y - PADDLE_H/2));
+  }, { passive: true });
+
 pauseBtn.addEventListener("click", () => running = !running);
 restartBtn.addEventListener("click", restartGame);
 twoPlayerChk.addEventListener("change", (e) => twoPlayer = e.target.checked);
