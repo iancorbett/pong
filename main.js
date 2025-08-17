@@ -47,6 +47,16 @@ function resetBall(towards = 1) {
   state.ballVY = BALL_START_SPEED * (Math.random() * 0.5 - 0.25);
 }
 
+function restartGame() {
+    p1Score = 0; p2Score = 0;
+    state.playerY = H/2 - PADDLE_H/2;
+    state.aiY = H/2 - PADDLE_H/2;
+    resetBall(randDir());
+    state.lastTime = 0;
+    running = true;
+    updateScoreUI();
+  }
+
 function updateScoreUI() {
     p1ScoreEl.textContent = p1Score;
     p2ScoreEl.textContent = p2Score;
