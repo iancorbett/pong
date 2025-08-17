@@ -3,6 +3,16 @@
 .score { font-size: 22px; font-weight: 700; color: var(--accent); }
 .sep { color: var(--muted); margin: 0 6px; }
 
+.controls { display: flex; gap: 10px; align-items: center; }
+button, .mode {
+  background: #0f172a; color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 6px 12px; border-radius: 10px; font-weight: 600;
+}
+button:hover { filter: brightness(1.12); cursor: pointer; }
+.mode { display: inline-flex; gap: 8px; align-items: center; }
+
+
 #game {
     width: 100%;
     height: auto;
