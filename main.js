@@ -145,21 +145,30 @@ function tick(ts) {
     }
 
       // Right paddle collision
-  if (state.ballX + BALL_SIZE >= AI_X &&
-    state.ballX + BALL_SIZE <= AI_X + PADDLE_W &&
-    ballCenterY >= state.aiY &&
-    ballCenterY <= state.aiY + PADDLE_H &&
-    state.ballVX > 0) {
-  const rel = (ballCenterY - (state.aiY + PADDLE_H/2)) / (PADDLE_H/2);
-  state.ballVX = -state.ballVX * BALL_SPEED_GROWTH;
-  state.ballVY = Math.abs(state.ballVX) * 0.40 * rel;
-}
+    if (state.ballX + BALL_SIZE >= AI_X &&
+        state.ballX + BALL_SIZE <= AI_X + PADDLE_W &&
+        ballCenterY >= state.aiY &&
+        ballCenterY <= state.aiY + PADDLE_H &&
+        state.ballVX > 0) {
+    const rel = (ballCenterY - (state.aiY + PADDLE_H/2)) / (PADDLE_H/2);
+    state.ballVX = -state.ballVX * BALL_SPEED_GROWTH;
+    state.ballVY = Math.abs(state.ballVX) * 0.40 * rel;
+    }
+    
     //scoring
     if (state.ballX + BALL_SIZE < 0) {
         p2Score++; updateScoreUI(); resetBall(1);
       } else if (state.ballX > W) {
         p1Score++; updateScoreUI(); resetBall(-1);
       }
+    }
+
+    function draw() {
+        // black background that fills entire canvas
+        ctx.fillStyle = "#0b1220";
+        ctx.fillRect(0, 0, W, H);
+
+
     }
 
    
