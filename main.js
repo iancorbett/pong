@@ -154,5 +154,12 @@ function tick(ts) {
   state.ballVX = -state.ballVX * BALL_SPEED_GROWTH;
   state.ballVY = Math.abs(state.ballVX) * 0.40 * rel;
 }
+    //scoring
+    if (state.ballX + BALL_SIZE < 0) {
+        p2Score++; updateScoreUI(); resetBall(1);
+      } else if (state.ballX > W) {
+        p1Score++; updateScoreUI(); resetBall(-1);
+      }
+    }
 
-  }  
+   
