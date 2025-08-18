@@ -168,6 +168,14 @@ function tick(ts) {
         ctx.fillStyle = "#0b1220";
         ctx.fillRect(0, 0, W, H);
 
+    // paddles are lighter for visibility
+    ctx.fillStyle = "#e2e8f0";
+    ctx.fillRect(PLAYER_X, state.playerY, PADDLE_W, PADDLE_H);
+    ctx.fillRect(AI_X, state.aiY, PADDLE_W, PADDLE_H);
+
+    // ball is same color as paddles
+    ctx.fillRect(state.ballX, state.ballY, BALL_SIZE, BALL_SIZE);
+
 
     }
 
