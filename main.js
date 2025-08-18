@@ -127,4 +127,9 @@ function tick(ts) {
       state.ballX += state.ballVX * dt;
       state.ballY += state.ballVY * dt;
 
+      if (state.ballY <= 0 && state.ballVY < 0) state.ballVY = -state.ballVY;
+      if (state.ballY + BALL_SIZE >= H && state.ballVY > 0) state.ballVY = -state.ballVY;
+    
+      
+
   }  
