@@ -123,4 +123,8 @@ function tick(ts) {
         state.aiY += dir * AI_SPEED * dt * far;
       }
       state.aiY = clamp(state.aiY, 0, H - PADDLE_H);
+
+      state.ballX += state.ballVX * dt;
+      state.ballY += state.ballVY * dt;
+
   }  
