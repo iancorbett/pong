@@ -45,3 +45,5 @@ CSS for styling
 ## Mobile
 
 Drag your finger up/down on the screen to move Player 1’s paddle.
+
+! [Screenshot] (screenshot.png)
