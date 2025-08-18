@@ -188,6 +188,13 @@ function tick(ts) {
     ctx.fillText("R = Restart", W/2, H/2 + 28);
   }
 
-    }
+}
+
+    //cant move paddle up or down off screen
+    function clamp(v, lo, hi){ return Math.max(lo, Math.min(hi, v)); }
+
+    //start game
+    updateScoreUI();
+    requestAnimationFrame(tick);
 
    
