@@ -133,4 +133,15 @@ function tick(ts) {
     
       const ballCenterY = state.ballY + BALL_SIZE/2;
 
+      //left paddle collision
+      if (state.ballX <= PLAYER_X + PADDLE_W &&
+        state.ballX >= PLAYER_X - BALL_SIZE &&
+        ballCenterY >= state.playerY &&
+        ballCenterY <= state.playerY + PADDLE_H &&
+        state.ballVX < 0) {
+      const rel = (ballCenterY - (state.playerY + PADDLE_H/2)) / (PADDLE_H/2); 
+      state.ballVX = -state.ballVX * BALL_SPEED_GROWTH;
+      state.ballVY = Math.abs(state.ballVX) * 0.45 * rel;
+    }
+
   }  
