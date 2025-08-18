@@ -176,6 +176,17 @@ function tick(ts) {
     // ball is same color as paddles
     ctx.fillRect(state.ballX, state.ballY, BALL_SIZE, BALL_SIZE);
 
+      // pause overlay
+  if (!running) {
+    ctx.fillStyle = "rgba(15,23,42,0.5)";
+    ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#f1f5f9";
+    ctx.font = "bold 28px ui-sans-serif, system-ui";
+    ctx.textAlign = "center";
+    ctx.fillText("Paused — Space to Resume", W/2, H/2);
+    ctx.font = "16px ui-sans-serif, system-ui";
+    ctx.fillText("R = Restart", W/2, H/2 + 28);
+  }
 
     }
 
