@@ -115,5 +115,12 @@ function tick(ts) {
     if (twoPlayer) {
         if (keys.p2up) state.aiY -= PLAYER_SPEED * dt;
         if (keys.p2down) state.aiY += PLAYER_SPEED * dt;
+      } else {
+        const aiCenter = state.aiY + PADDLE_H/2;
+        const target = state.ballY + BALL_SIZE/2 + (state.ballVX > 0 ? 0 : 40);
+        const dir = Math.sign(target - aiCenter);
+        const far = Math.abs(target - aiCenter) > 6 ? 1 : 0;
+        state.aiY += dir * AI_SPEED * dt * far;
       }
+      state.aiY = clamp(state.aiY, 0, H - PADDLE_H);
   }  
