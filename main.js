@@ -103,3 +103,12 @@ function tick(ts) {
   
     requestAnimationFrame(tick);
   }
+
+  function update(dt) {
+    if (!running) return;
+  
+    // if key is up decrease speed if down increase speed
+    if (keys.up) state.playerY -= PLAYER_SPEED * dt;
+    if (keys.down) state.playerY += PLAYER_SPEED * dt;
+    state.playerY = clamp(state.playerY, 0, H - PADDLE_H);
+  }  
