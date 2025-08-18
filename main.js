@@ -111,4 +111,9 @@ function tick(ts) {
     if (keys.up) state.playerY -= PLAYER_SPEED * dt;
     if (keys.down) state.playerY += PLAYER_SPEED * dt;
     state.playerY = clamp(state.playerY, 0, H - PADDLE_H);
+
+    if (twoPlayer) {
+        if (keys.p2up) state.aiY -= PLAYER_SPEED * dt;
+        if (keys.p2down) state.aiY += PLAYER_SPEED * dt;
+      }
   }  
