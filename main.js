@@ -128,8 +128,9 @@ function tick(ts) {
       state.ballY += state.ballVY * dt;
 
       if (state.ballY <= 0 && state.ballVY < 0) state.ballVY = -state.ballVY;
+      // state measured from bottom of ball which is whywe include size when detecting impact with top
       if (state.ballY + BALL_SIZE >= H && state.ballVY > 0) state.ballVY = -state.ballVY;
     
-      
+      const ballCenterY = state.ballY + BALL_SIZE/2;
 
   }  
